@@ -1,4 +1,4 @@
-alphabet = %w{A B C D E F G H I J K L M N O P Q R S T U V W X Y Z .}
+alphabet = %w{A B C D E F G H I J K L M N O P Q R S T U V W X Y Z}
 
 pad_file = ARGV[0]
 encrypted_message = ARGV[1]
@@ -17,10 +17,12 @@ message_array.each_with_index do |letter, index|
   unencrypted_letter_index = index_of_letter - index_of_pad_letter
 
   if unencrypted_letter_index < 0
-    unencrypted_letter_index = unencrypted_letter_index + 27
+    unencrypted_letter_index = unencrypted_letter_index + 26
   end
 
   message << alphabet[unencrypted_letter_index]
 end
+
+message = message.tr("XX", " ").tr("XXXX", ".")
 
 puts message

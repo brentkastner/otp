@@ -12,7 +12,7 @@ end
 
 for current_pad in 1..number_of_pads.to_i do
   pad = ''
-  10000.times do
+  10005.times do
     secure_letter = SecureRandom.random_number(26)
     pad << alphabet[secure_letter]
   end
@@ -21,6 +21,6 @@ for current_pad in 1..number_of_pads.to_i do
   #pad = pad.scan(/.{1,5}/).join(' ')
   #puts pad
 
-  File.write("pads/#{Date.today.to_s}-#{current_pad}.txt", pad)
+  File.write("pads/#{pad.slice!(0,5)}-#{Date.today.to_s}.txt", pad)
 end
 
