@@ -12,7 +12,7 @@ end
 
 for current_pad in 1..number_of_pads.to_i do
   pad = ''
-  10005.times do
+  15005.times do
     secure_letter = SecureRandom.random_number(26)
     pad << alphabet[secure_letter]
   end
