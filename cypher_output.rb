@@ -5,7 +5,7 @@ pad = File.read(pad_file)
 message = File.read("messages/message1.txt")
 encoded_text = ""
 
-message = message.upcase.tr(" ", "XX").tr(".", "XXXX")
+message = message.upcase.tr(" ", "XXX").tr(".", "XXXX")
 
 message_text_array = message.chars.to_a
 secure_random_text = pad.chars.to_a

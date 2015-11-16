@@ -23,6 +23,6 @@ message_array.each_with_index do |letter, index|
   message << alphabet[unencrypted_letter_index]
 end
 
-message = message.tr("XX", " ").tr("XXXX", ".")
+#message = message.tr("XXX", " ").tr("XXXX", ".")
 
 puts message

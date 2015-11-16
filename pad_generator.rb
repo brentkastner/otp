@@ -21,6 +21,6 @@ for current_pad in 1..number_of_pads.to_i do
   #pad = pad.scan(/.{1,5}/).join(' ')
   #puts pad
 
-  File.write("pads/#{pad.slice!(0,5)}-#{Date.today.to_s}.txt", pad)
+  File.write("pads/#{pad.slice!(0,5)}.pad", pad)
 end
 
