@@ -1,4 +1,4 @@
-alphabet = %w{A B C D E F G H I J K L M N O P Q R S T U V W X Y Z}
+alphabet = %w{A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 0 1 2 3 4 5 6 7 8 9}
 
 pad_file = ARGV[0]
 pad = File.read(pad_file)
@@ -19,8 +19,8 @@ message_text_array.each_with_index do |letter, index|
 
   cypher_letter_index = index_of_message_character.to_i + index_from_pad.to_i
 
-  if cypher_letter_index > 25
-    cypher_letter_index = cypher_letter_index - 26
+  if cypher_letter_index > 35
+    cypher_letter_index = cypher_letter_index - 36
   end
 
   cypher_letter = alphabet[cypher_letter_index]
