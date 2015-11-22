@@ -5,7 +5,8 @@ pad = File.read(pad_file)
 message = File.read("messages/message1.txt")
 encoded_text = ""
 
-message = message.upcase.tr(" ", "XXX").tr(".", "XXXX")
+message = message.upcase.gsub(".", "XZZX")
+message = message.gsub(" ", "XZX")
 
 message_text_array = message.chars.to_a
 secure_random_text = pad.chars.to_a
@@ -24,7 +25,6 @@ message_text_array.each_with_index do |letter, index|
   end
 
   cypher_letter = alphabet[cypher_letter_index]
-
   encoded_text << cypher_letter
 end
 

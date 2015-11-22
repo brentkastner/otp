@@ -23,6 +23,7 @@ message_array.each_with_index do |letter, index|
   message << alphabet[unencrypted_letter_index]
 end
 
-#message = message.tr("XXX", " ").tr("XXXX", ".")
+message = message.gsub("XZZX", ".")
+message = message.gsub("XZX", " ")
 
 puts message
