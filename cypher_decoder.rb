@@ -25,5 +25,6 @@ end
 
 message = message.gsub("XZZX", ".")
 message = message.gsub("XZX", " ")
+message = message.gsub("TTTTT", ",")
 
 puts message

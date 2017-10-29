@@ -7,6 +7,7 @@ encoded_text = ""
 
 message = message.upcase.gsub(".", "XZZX")
 message = message.gsub(" ", "XZX")
+message = message.gsub(",", "TTTTT")
 
 message_text_array = message.chars.to_a
 secure_random_text = pad.chars.to_a
